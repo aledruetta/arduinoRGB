@@ -27,10 +27,12 @@ void setup() {
   pinMode(GREEN, OUTPUT);
   pinMode(BLUE,  OUTPUT);
 
-  Serial.begin(9600);
-  Serial.println("Starting Serial...");
-  if (!Serial);
-  Serial.println("Started!");
+  if (DEBUG) {
+    Serial.begin(9600);
+    Serial.println("Starting Serial...");
+    if (!Serial);
+    Serial.println("Started!");
+  }
  }
 
 void loop() {
